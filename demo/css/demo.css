@@ -1,0 +1,67 @@
+body {
+    background: #32004b;
+}
+
+#wrapper {
+    max-width: 1000px;
+    min-width: 500px;
+    margin: 0 auto;
+    background: white;
+    padding: 32px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.block-center {
+    display: table;
+    margin: 0 auto;
+}
+
+
+
+#ncs0 .ncs-card {
+    width: 453px;
+    height: 304px;
+}
+
+#ncs0_card_0 {
+    background-image: url(../img/card0.png);
+}
+
+#ncs0_card_1 {
+    background-image: url(../img/card1.png);
+}
+
+#ncs0_card_2 {
+    background-image: url(../img/card2.png);
+}
+
+#ncs0_card_3 {
+    background-image: url(../img/card3.png);
+}
+
+#ncs0 .ncs-card a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+#ncs1 {
+    width: 402px;
+    height: 310px;
+}
+
+#ncs1_control {
+    position: relative;
+    top: 280px;
+}
+
+#ncs1 .ncs-card {
+    width: 400px;
+    height: 267px;
+    border: 1px solid black;
+}

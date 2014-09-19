@@ -1,0 +1,73 @@
+<!doctype html>
+<meta charset="utf-8" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<link rel="stylesheet" href="../css/jquery.ncs.css" />
+<script src="../js/jquery.ncs.js"></script>
+
+<link rel="stylesheet" href="css/demo.css" />
+
+<div id="wrapper">
+    <h1 class="text-center">Nxeed's Card Slider</h1>
+    <div class="ncs-container" id="ncs0">
+        <div id="ncs0_card_0" class="ncs-card"><a href="#"></a></div>
+        <div id="ncs0_card_1" class="ncs-card"><a href="#"></a></div>
+        <div id="ncs0_card_2" class="ncs-card"><a href="#"></a></div>
+        <div id="ncs0_card_3" class="ncs-card"><a href="#"></a></div>
+    </div>
+
+    <p class="text-center">
+        <a onClick="$('#wrapper').animate({maxWidth: 1000}, function() {$('.ncs-container').ncs('resize');}); return false;" href="#">Wide wrapper</a>
+        <a onClick="$('#wrapper').animate({maxWidth: 600}, function() {$('.ncs-container').ncs('resize');}); return false;" href="#">Small wrapper</a>
+    </p>
+
+    <script>
+        $('#ncs0').ncs();
+    </script>
+
+    <div class="block-center">
+        <div id="ncs1">
+            <a href="#" class="ncs-card"><img src="img/photo0.png" /></a>
+            <a href="#" class="ncs-card"><img src="img/photo1.png" /></a>
+            <a href="#" class="ncs-card"><img src="img/photo2.png" /></a>
+            <a href="#" class="ncs-card"><img src="img/photo3.png" /></a>
+            <a href="#" class="ncs-card"><img src="img/photo4.png" /></a>
+            <a href="#" class="ncs-card"><img src="img/photo5.png" /></a>
+
+            <div id="ncs1_control" class="text-center">
+                <a onClick="$('#ncs1').ncs('prev'); return false;" href="#">← Prev</a>
+                <a onClick="$('#ncs1').ncs('next'); return false;" href="#">Next →</a>
+                <a onClick="$('#ncs1').ncs('set', 0); return false;" href="#">First</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('#ncs1').ncs({
+            offset: 0,
+            indent: 0,
+            animationSpeed: 800,
+            activeOnClick: true,
+            autoHeight: false
+        });
+
+        var autoplay;
+        var autoplayAction = function() {
+            $('#ncs1').ncs('next');
+        };
+
+        var setAutoplay = function() {
+            autoplay = setInterval(autoplayAction, 2000);
+        };
+
+        $('#ncs1').hover(
+            function() {
+                clearInterval(autoplay);
+            },
+            function() {
+                setAutoplay();
+            }
+        );
+
+        setAutoplay();
+    </script>
+</div>
