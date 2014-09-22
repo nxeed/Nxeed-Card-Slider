@@ -189,7 +189,7 @@
         } else if (typeof method === 'object' || !method) {
             return methods.init.apply(this, arguments);
         } else {
-            $.error('Метод "' + method + '" не найден в плагине jQuery.ncs');
+            $.error("Method " + method + " does not exist for jQuery.ncs.");
         }
     };
 })(jQuery);
